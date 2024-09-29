@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced CSS Selectors Demo">
+    <title>Advanced Selectors Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <h1>Advanced CSS Selectors Demo</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content" id="home">
+        <section class="intro">
+            <h2>Welcome to Our Website</h2>
+            <p>This site is designed to demonstrate the power of advanced CSS selectors, including child selectors, pseudo-classes, and sibling selectors.</p>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p class="highlighted">We focus on modern web design using clean and efficient CSS.</p>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li data-category="design">Web Design</li>
+                <li data-category="development">Web Development</li>
+                <li data-category="seo">SEO Optimization</li>
+                <li data-category="marketing">Digital Marketing</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer" id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch through the form below:</p>
+        <form action="#">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <button type="submit">Submit</button>
+        </form>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* Header and Navbar */
+.site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Attribute Selectors */
+.navbar a[href="#home"] {
+    color: #ff4500;
+}
+
+.navbar a[href^="#about"] {
+    color: #1e90ff;
+}
+
+.navbar a[href$="#services"] {
+    color: #32cd32;
+}
+
+/* Pseudo Selectors */
+.navbar a:hover {
+    color: #ff1493;
+}
+
+.navbar a:active {
+    color: #fff;
+}
+
+/* :nth-child() */
+ul li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+ul li:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Sibling Selectors */
+.about + .services {
+    border-top: 2px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Child Selectors */
+.site-header > h1 {
+    font-size: 2.5rem;
+}
+
+.main-content > section > h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* :before and :after Pseudo-elements */
+.site-header h1::before {
+    content: "★ ";
+    color: gold;
+}
+
+.site-header h1::after {
+    content: " ★";
+    color: gold;
+}
+
+/* :first-letter */
+.intro p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+/* :not Selector */
+li:not([data-category="design"]) {
+    font-style: italic;
+}
+
+/* Input Attribute Selectors */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #32cd32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #28a745;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .navbar ul {
+        justify-content: flex-start;
+    }
+
+    .navbar li {
+        margin: 0 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .intro, .about, .services {
+        flex-basis: 30%;
+        margin: 10px;
+    }
+
+    .site-footer form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input[type="email"] {
+        flex: 1;
+        margin-right: 10px;
+    }
+}
